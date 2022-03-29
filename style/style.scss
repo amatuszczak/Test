@@ -1,0 +1,22 @@
+
+
+@mixin test($size){
+    border: $size solid black;
+    font-size: $size;
+    padding: $size;
+}
+
+form div{
+    &:nth-child(1){
+        @include test(10px);
+    }
+    &:nth-child(2){
+        @include test(1em);
+    
+    }
+    &:nth-child(3){
+        @include test(2em)
+    }
+
+}
+
